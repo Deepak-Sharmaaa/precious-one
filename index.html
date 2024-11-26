@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A Note for You</title>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS User ID
+  })();
+</script>
   <style>
     body {
       font-family: 'Georgia', serif;
@@ -114,10 +120,24 @@
     </p>
     <div class="heart">❤️</div>
     <p class="signature">With love, always.</p>
-    <form action="send_email.php" method="POST">
-      <textarea name="reply" placeholder="Write your reply here..."></textarea>
-      <button type="submit">Send Reply</button>
-    </form>
+    <form id="replyForm">
+  <textarea name="reply" placeholder="Write your reply here..." required></textarea>
+  <button type="button" onclick="sendEmail()">Send Reply</button>
+</form>
+
   </div>
+  <script>
+  function sendEmail() {
+    const reply = document.querySelector('textarea[name="reply"]').value;
+    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", { reply })
+      .then(response => {
+        alert("Thank you! Your reply has been sent.");
+      })
+      .catch(error => {
+        alert("Oops! Something went wrong. Please try again.");
+      });
+  }
+</script>
+
 </body>
 </html>
