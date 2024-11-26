@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Note for You</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(145deg, #f3e5d9, #f5ece4);
+      color: #4b3832;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      max-width: 700px;
+      padding: 30px 40px;
+      text-align: center;
+      animation: fadeIn 1.5s ease;
+    }
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      color: #9c5d43;
+    }
+    p {
+      line-height: 1.8;
+      font-size: 1.2rem;
+      margin: 15px 0;
+    }
+    .flirty {
+      font-style: italic;
+      color: #9c5d43;
+      font-weight: bold;
+    }
+    .emotional {
+      margin-top: 20px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #4b3832;
+    }
+    .signature {
+      margin-top: 30px;
+      font-size: 1rem;
+      font-style: italic;
+      color: #9c5d43;
+    }
+    .divider {
+      width: 80px;
+      height: 2px;
+      background: #9c5d43;
+      margin: 20px auto;
+    }
+    .heart {
+      font-size: 4rem;
+      color: #9c5d43;
+      margin-top: 10px;
+      animation: pulse 1.5s infinite;
+    }
+    form {
+      margin-top: 20px;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline: none;
+      resize: none;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #9c5d43;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #80422f;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>To Someone Truly Special</h1>
+    <div class="divider"></div>
+    <p>
+      Over the past 1.5 years, life has been a journey—full of highs and lows, lessons and laughter. Through it all, we've stood by each other, growing stronger and more connected every day.  
+      Spending time with you isn't just a moment of joy; it's a blessing I cherish deeply.
+    </p>
+    <p>
+      From the day we started talking, I’ve felt myself change in the best ways. You’ve taught me patience, kindness, and the power of listening. You’ve made me a better person, and for that, I’m endlessly grateful.
+    </p>
+    <p class="flirty">
+      Honestly, I think the stars got jealous the day you were born because they knew their shine couldn’t compare to yours. 🌟  
+      And let’s face it, your smile? It’s my favorite kind of sunrise. ☀️  
+    </p>
+    <p class="emotional">
+      You’ve brought light to my life in ways I never imagined possible.  
+      No matter where life takes us, you’ll always have a piece of my heart—and it’s the best part of me. 💖
+    </p>
+    <div class="heart">❤️</div>
+    <p class="signature">With love, always.</p>
+    <form action="send_email.php" method="POST">
+      <textarea name="reply" placeholder="Write your reply here..."></textarea>
+      <button type="submit">Send Reply</button>
+    </form>
+  </div>
+</body>
+</html>
